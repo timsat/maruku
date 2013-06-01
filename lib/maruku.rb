@@ -32,6 +32,7 @@ module MaRuKu
   module Out
     module Markdown; end
     module HTML; end
+    module SimpleHTML; end
     module Latex; end
   end
 
@@ -45,6 +46,7 @@ module MaRuKu
     include MaRuKu
     include Out::Markdown
     include Out::HTML
+    include Out::SimpleHTML
     include Out::Latex
     include Strings
     include Helpers
@@ -112,6 +114,9 @@ require 'maruku/output/entity_table'
 
 # Exporting to html
 require 'maruku/output/to_html'
+
+# Exporting to simple html
+require 'maruku/output/to_simplehtml'
 
 # Exporting to latex
 require 'maruku/output/to_latex'
